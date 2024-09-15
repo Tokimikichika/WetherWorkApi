@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Меняем на flex-start для правильного размещения */
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+#main-container {
+    background: rgba(0, 0, 0, 0); /* Прозрачный фон */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 80%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#time-date {
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+#weather,
+#tasks {
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 2em; 
+}
+
+#slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#weather {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#tasks {
+    width: 300px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1em; 
+}
+
+#tasks input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+input[type="text"],
+#clear-completed {
+    background-color: rgba(255, 255, 255, 0.2); /* Прозрачный фон */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Цвет плейсхолдера */
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#task-list li {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#clear-completed {
+    margin-top: 10px;
+    cursor: pointer;
+}

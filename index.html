@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="main-container">
+        <!-- Часы и дата -->
+        <div id="time-date">
+            <div id="time"></div>
+            <div id="date"></div>
+        </div>
+
+        <!-- Слайдер изображений -->
+        <div id="slider">
+            <!-- Фоновое изображение устанавливается через CSS -->
+        </div>
+
+        <!-- Виджет погоды -->
+         
+        <div id="weather">
+            <input type="text" id="city" placeholder="Введите город">
+            <div id="weather-info">
+                <div id="temperature"></div>
+                <div id="description"></div>
+            </div>
+        </div>
+
+        <!-- Список задач -->
+        <div id="tasks">
+            <input type="text" id="new-task" placeholder="Добавить новую задачу">
+            <ul id="task-list"></ul>
+            <button id="clear-completed">Удалить выполненные задачи</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/tasks.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
