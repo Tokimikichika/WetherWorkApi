@@ -17,6 +17,5 @@ function updateBackground() {
     document.body.style.backgroundImage = `url(${backgroundUrl})`;
 }
 
-// Инициализация слайдера изображений
 updateBackground();
-setInterval(updateBackground, 3600000); // Обновление каждые 1 час
+setInterval(updateBackground, 3600000); 

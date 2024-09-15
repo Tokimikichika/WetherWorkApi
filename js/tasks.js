@@ -12,7 +12,6 @@ function addTask(taskText) {
     saveTasks();
 }
 
-// Сохранение задач в localStorage
 function saveTasks() {
     const tasks = Array.from(document.querySelectorAll('#task-list li')).map(item => ({
         text: item.querySelector('span').textContent,
@@ -22,13 +21,11 @@ function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-// Загрузка задач из localStorage
 function loadTasks() {
     const tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
     tasks.forEach(task => addTask(task.text));
 }
 
-// Событие добавления новой задачи
 document.getElementById('new-task').addEventListener('keypress', function(e) {
     if (e.key === 'Enter' && this.value.trim() !== '') {
         addTask(this.value.trim());
@@ -36,7 +33,6 @@ document.getElementById('new-task').addEventListener('keypress', function(e) {
     }
 });
 
-// Удаление выполненных задач
 document.getElementById('clear-completed').addEventListener('click', function() {
     const tasks = document.querySelectorAll('#task-list li');
     tasks.forEach(task => {
@@ -47,7 +43,6 @@ document.getElementById('clear-completed').addEventListener('click', function() 
     saveTasks();
 });
 
-// Удаление задачи по кнопке
 document.getElementById('task-list').addEventListener('click', function(e) {
     if (e.target.classList.contains('delete')) {
         e.target.parentElement.remove();
@@ -55,5 +50,4 @@ document.getElementById('task-list').addEventListener('click', function(e) {
     }
 });
 
-// Инициализация списка задач
 loadTasks();

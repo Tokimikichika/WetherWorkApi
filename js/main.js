@@ -9,11 +9,9 @@ function updateTime() {
     document.getElementById('time').textContent = time;
     document.getElementById('date').textContent = date;
 
-    // Обновление каждые секунду
     setTimeout(updateTime, 1000);
 }
 
-// Инициализация приложения
 window.onload = function() {
     updateTime();
 };
